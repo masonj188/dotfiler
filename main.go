@@ -36,7 +36,10 @@ func main() {
 
 	switch command {
 	case "update":
-		myConfig.Update(*hostname)
+		err = myConfig.Update(*hostname)
+		if err != nil {
+			log.Fatalln(err)
+		}
 	case "apply":
 		err = myConfig.Apply(*hostname)
 		if err != nil {

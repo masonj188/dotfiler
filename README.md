@@ -16,10 +16,10 @@ dotfiles:
       frozen: false
 
 - name: polybar/
-  filepath: test/polybar/polybar
+  filepath: test/polybar/polybar/
   hosts:
     - hostname: desktop
-      path: /home/user/.config/test/polybar/polybar
+      path: /home/user/.config/test/polybar/
       frozen: true
     - name: blade
       path: /home/user/.config/polybar/
@@ -41,13 +41,13 @@ A dotfile has the following fields
 
 **name**: A dotfile name has no meaning other than as a way to differentiate it to the user
 
-**filepath**: the path in the current directory where the dotfile resides
+**filepath**: the path in the current directory where the dotfile/config directory resides
 
 **hosts**: A list of hosts to apply this dotfile to
 
-**hostname**: Hostname of the computer to apply this dotfile to
+**hostname**: Hostname of the computer to apply this dotfile/directory to
 
-**path**: Full path and filename of where to put the dotfile on this host
+**path**: Full path and filename of where to put the dotfile/directory on this host
 
 **frozen**: boolean determining whether this host is "frozen" for this dotfile, meaning to skip it for now
 
@@ -89,6 +89,6 @@ Specify path and name of config file to use (default "./config.yml")
 Set hostname to use for this run (default is current machine's hostname)
 
 ## Installation
-If you have a working Go installation, simply `go get github.com/masonj188/dotfiler`
+If you have a working Go installation, simply `go get -u github.com/masonj188/dotfiler`
 
 If you don't have a Go installation, precompiled binaries will soon be available for most major operating systems.
