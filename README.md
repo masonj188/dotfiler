@@ -4,20 +4,36 @@ Dotfiler makes it easy to manage dotfiles across multiple hosts
 ## Usage
 dotfiler [flags] [command]
 
-Please see `example-config.yml` for an example config file
+Please see `example-config.yml` for an example config file.
 
-### Commands
-apply
+## Commands
+**apply**
 
-update
+Apply the current configuration file, will replace all configured config files that match the hostname.
 
-backup
+**update**
 
-restore
+Update the current directories dotfiles with ones from the specific host.
+
+**backup**
+
+Backup current directories dotfiles into the specified directory, must be used with -b flag.
+
+**restore**
+
+Restore a backed up configuration, must be used with the -b flag.
+
 
 ### Flags
--c *path/to/config.yml*
+**-c *path/to/config.yml***
 
--h *hostname*
+Specify the path for backup or restore to use (default "./backup/config.yml.bak")
 
--b *path/to/backup.bak*
+**-h *hostname***
+
+Specify path and name of config file to use (default "./config.yml")
+
+
+**-b *path/to/backup.bak***
+
+Set hostname to use for this run (default is current machine's hostname)
