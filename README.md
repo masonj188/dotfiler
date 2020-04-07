@@ -1,10 +1,60 @@
 # Dotfiler
-Dotfiler makes it easy to manage dotfiles across multiple hosts
+Dotfiler makes it easy to manage dotfiles across multiple hosts with a single configuration file.
+
+Example of a configuration file:
+```yml
+dotfiles:
+- name: default_i3
+  filepath: test/i3/i3
+  hosts:
+    - name: desktop
+      path: /home/user/.config/test/i3/i3
+      frozen: false
+
+    - name: blade
+      path: /home/user/.config/i3/i3
+      frozen: false
+
+- name: polybar/
+  filepath: test/polybar/polybar
+  hosts:
+    - name: desktop
+      path: /home/user/.config/test/polybar/polybar
+      frozen: true
+    - name: blade
+      path: /home/user/.config/polybar/
+      frozen: false
+
+- name: .vimrc
+  filepath: test/vim/.vimrc
+  hosts:
+    - name: desktop
+      path: /home/user/.config/test/vim/.vimrc
+      frozen: false
+    
+    - name: blade
+      path: /home/user/.vimrc
+      frozen: false
+```
+
+A dotfile has the following fields
+
+**name**: A dotfile name has no meaning other than as a way to differentiate it to the user
+
+**filepath**: the path in the current directory where the dotfile resides
+
+**hosts**: A list of hosts to apply this dotfile to
+
+**name**: Hostname of the computer to apply this dotfile to
+
+**path**: Full path and filename of where to put the dotfile on this host
+
+**frozen**: boolean determining whether this host is "frozen" for this dotfile, meaning to skip it for now
 
 ## Usage
 dotfiler [flags] [command]
 
-Please see `example-config.yml` for an example config file.
+Typical usage would be to store all of your dotfiles in a git repository along with a Dotfiler configuration file.  Then applying dotfiles is as easy as cloning the repo and running `dotfiler apply` in the git repo's directory.
 
 ## Commands
 **apply**
