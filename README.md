@@ -57,7 +57,7 @@ dotfiler [flags] [command]
 
 Typical usage would be to store all of your dotfiles in a git repository along with a Dotfiler configuration file.  Then applying dotfiles is as easy as cloning the repo and running `dotfiler apply` in the git repo's directory.
 
-## Commands
+### Commands
 **apply**
 
 Apply the current configuration file, will replace all configured config files that match the hostname.
