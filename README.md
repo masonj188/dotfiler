@@ -1,3 +1,4 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/masonj188/dotfiler)](https://goreportcard.com/report/github.com/masonj188/dotfiler)
 # Dotfiler
 Dotfiler makes it easy to manage dotfiles across multiple hosts with a single configuration file.
 
