@@ -1,0 +1,35 @@
+---
+dotfiles:
+- name: default_i3
+  filepath: test/i3/i3
+  hosts:
+    - name: desktop
+      path: /home/user/.config/test/i3/i3
+      frozen: false
+
+    - name: blade
+      path: /home/user/.config/i3/i3
+      frozen: false
+
+- name: polybar/
+  filepath: test/polybar/polybar
+  hosts:
+    - name: desktop
+      path: /home/user/.config/test/polybar/polybar
+      frozen: false
+    - name: blade
+      path: /home/user/.config/polybar/
+      frozen: false
+
+- name: .vimrc
+  filepath: test/vim/.vimrc
+  hosts:
+    - name: desktop
+      path: /home/user/.config/test/vim/.vimrc
+      frozen: false
+    
+    - name: blade
+      path: /home/user/.vimrc
+      frozen: false
+
+  
