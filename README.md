@@ -1,3 +1,4 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/masonj188/dotfiler)](https://goreportcard.com/report/github.com/masonj188/dotfiler)
 # Dotfiler
 Dotfiler makes it easy to manage dotfiles across multiple hosts with a single configuration file.
 
@@ -21,8 +22,8 @@ dotfiles:
     - hostname: desktop
       path: /home/user/.config/test/polybar/
       frozen: true
-    - name: blade
-      path: /home/user/.config/polybar/
+    - hostname: blade
+      path: /home/user/.config/polybar
       frozen: false
 
 - name: .vimrc
@@ -56,7 +57,7 @@ dotfiler [flags] [command]
 
 Typical usage would be to store all of your dotfiles in a git repository along with a Dotfiler configuration file.  Then applying dotfiles is as easy as cloning the repo and running `dotfiler apply` in the git repo's directory.
 
-## Commands
+### Commands
 **apply**
 
 Apply the current configuration file, will replace all configured config files that match the hostname.
@@ -87,8 +88,11 @@ Specify path and name of config file to use (default "./config.yml")
 **-b *path/to/backup.bak***
 
 Set hostname to use for this run (default is current machine's hostname)
+<<<<<<< HEAD
 
 ## Installation
 If you have a working Go installation, simply `go get -u github.com/masonj188/dotfiler`
 
 If you don't have a Go installation, precompiled binaries will soon be available for most major operating systems.
+=======
+>>>>>>> bc8d7236b1e4a3d5a20280e31a62cc47bd5cb8e3
