@@ -42,7 +42,7 @@ func (c *Config) Apply(hostname string) error {
 	for _, d := range c.Dotfiles {
 		for _, h := range d.Hosts {
 			// Check for which dotfiles to apply; you can cheese this by specifying a hostname in the command line
-			if h.Name == hostname {
+			if h.Hostname == hostname {
 				source, err := os.Open(d.Filepath)
 				if err != nil {
 					return fmt.Errorf("error opening config dotfile: %v", err)
@@ -82,7 +82,7 @@ func (c *Config) Backup(hostname, path string) error {
 	fmt.Println("Backup")
 	for _, d := range c.Dotfiles {
 		for _, h := range d.Hosts {
-			if h.Name == hostname {
+			if h.Hostname == hostname {
 				// grab h.Path and move it to path
 				break
 			}

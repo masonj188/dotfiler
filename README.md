@@ -7,18 +7,18 @@ dotfiles:
 - name: default_i3
   filepath: test/i3/i3
   hosts:
-    - name: desktop
+    - hostname: desktop
       path: /home/user/.config/test/i3/i3
       frozen: false
 
-    - name: blade
+    - hostname: blade
       path: /home/user/.config/i3/i3
       frozen: false
 
 - name: polybar/
   filepath: test/polybar/polybar
   hosts:
-    - name: desktop
+    - hostname: desktop
       path: /home/user/.config/test/polybar/polybar
       frozen: true
     - name: blade
@@ -28,11 +28,11 @@ dotfiles:
 - name: .vimrc
   filepath: test/vim/.vimrc
   hosts:
-    - name: desktop
+    - hostname: desktop
       path: /home/user/.config/test/vim/.vimrc
       frozen: false
     
-    - name: blade
+    - hostname: blade
       path: /home/user/.vimrc
       frozen: false
 ```
@@ -45,7 +45,7 @@ A dotfile has the following fields
 
 **hosts**: A list of hosts to apply this dotfile to
 
-**name**: Hostname of the computer to apply this dotfile to
+**hostname**: Hostname of the computer to apply this dotfile to
 
 **path**: Full path and filename of where to put the dotfile on this host
 

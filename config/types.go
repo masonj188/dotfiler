@@ -2,9 +2,9 @@ package config
 
 //Host represents a host within a specific Dotfile
 type Host struct {
-	Name   string
-	Path   string
-	Frozen bool
+	Hostname string
+	Path     string
+	Frozen   bool
 }
 
 //Dotfile is a specific Dotfile configuration
