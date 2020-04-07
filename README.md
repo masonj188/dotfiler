@@ -21,7 +21,7 @@ dotfiles:
     - hostname: desktop
       path: /home/user/.config/test/polybar/polybar
       frozen: true
-    - name: blade
+    - hostname: blade
       path: /home/user/.config/polybar/
       frozen: false
 
