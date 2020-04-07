@@ -41,6 +41,7 @@ func (c *Config) Update(hostname string) error {
 func (c *Config) Apply(hostname string) error {
 	for _, d := range c.Dotfiles {
 		for _, h := range d.Hosts {
+			// Check for which dotfiles to apply; you can cheese this by specifying a hostname in the command line
 			if h.Name == hostname {
 				source, err := os.Open(d.Filepath)
 				if err != nil {
@@ -48,6 +49,7 @@ func (c *Config) Apply(hostname string) error {
 				}
 				defer source.Close()
 
+				// Create the dotfile directory if needed
 				if _, err := os.Stat(filepath.Dir(h.Path)); os.IsNotExist(err) {
 					err = os.MkdirAll(filepath.Dir(h.Path), os.ModePerm)
 					if err != nil {
