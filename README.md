@@ -15,14 +15,14 @@ dotfiles:
       path: /home/user/.config/i3/i3
       frozen: false
 
-- name: polybar/
+- name: polybar
   filepath: test/polybar/polybar
   hosts:
     - hostname: desktop
       path: /home/user/.config/test/polybar/polybar
       frozen: true
     - hostname: blade
-      path: /home/user/.config/polybar/
+      path: /home/user/.config/polybar
       frozen: false
 
 - name: .vimrc
