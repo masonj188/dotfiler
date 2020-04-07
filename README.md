@@ -87,3 +87,8 @@ Specify path and name of config file to use (default "./config.yml")
 **-b *path/to/backup.bak***
 
 Set hostname to use for this run (default is current machine's hostname)
+
+## Installation
+If you have a working Go installation, simply `go get github.com/masonj188/dotfiler`
+
+If you don't have a Go installation, precompiled binaries will soon be available for most major operating systems.
