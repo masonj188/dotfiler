@@ -67,11 +67,11 @@ Apply the current configuration file, will replace all configured config files t
 
 Update the current directories dotfiles with ones from the specific host.
 
-**backup**
+**backup** (not implemented yet)
 
 Backup current directories dotfiles into the specified directory, must be used with -b flag.
 
-**restore**
+**restore** (not implemented yet)
 
 Restore a backed up configuration, must be used with the -b flag.
 
