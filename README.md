@@ -79,16 +79,15 @@ Restore a backed up configuration, must be used with the -b flag.
 ### Flags
 **-c *path/to/config.yml***
 
-Specify the path for backup or restore to use (default "./backup/config.yml.bak")
+Specify path and name of config file to use (default "./config.yml")
 
 **-h *hostname***
 
-Specify path and name of config file to use (default "./config.yml")
-
+Set hostname to use for this run (default is current machine's hostname)
 
 **-b *path/to/backup.bak***
 
-Set hostname to use for this run (default is current machine's hostname)
+Specify the path for backup or restore to use (default "./backup/config.yml.bak")
 
 ## Installation
 If you have a working Go installation, simply `go get -u github.com/masonj188/dotfiler`
